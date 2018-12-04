@@ -1,24 +1,47 @@
 # README
+Era Vodoleya
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## System dependencies
+- Ruby 2.5.0
+- Rails 5.2.1
+- Node.js
+- Yarn
+- Postgres 10
 
-Things you may want to cover:
+### Installation:
 
-* Ruby version
+```bash
+git clone git@github.com:/DmitriyManaev/vodoley.git
 
-* System dependencies
+cd vodoley
 
-* Configuration
+bundle install
 
-* Database creation
+cp config/secrets.yml.example config/secrets.yml
+cp config/database.yml.example config/database.yml
 
-* Database initialization
+rails db:create
+rails db:migrate
 
-* How to run the test suite
+yarn install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Run server
 
-* Deployment instructions
+UPDATES: do not need to run.
 
-* ...
+To run server:
+```bash
+rails s
+```
+
+To run webpacker server (not necessary):
+```bash
+./bin/webpack-dev-server
+```
+
+### Tests
+```bash
+bundle exec rails db:test:prepare
+bundle exec rspec
+```
