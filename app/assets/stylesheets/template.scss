@@ -928,7 +928,7 @@ blockquote small {
 }
 /*======================= FOOTER =======================*/
 #copyright-row {
-    font-size: 11px;
+    font-size: 13px;
     color: #545454;
     padding: 67px 0 62px;
 }
@@ -940,7 +940,9 @@ blockquote small {
 }
 #copyright {
     float: left;
-    text-transform: capitalize;
+    span {
+      display: block;
+    }
 }
 .footer_menu {
     float: right;
@@ -954,6 +956,9 @@ blockquote small {
     padding: 0;
     background: none;
     line-height: 24px;
+    a {
+      padding: 0;
+    }
 }
 .footer_menu .mod-menu .nav.menu li + li {
     padding-left: 17px;

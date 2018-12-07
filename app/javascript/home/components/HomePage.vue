@@ -1,16 +1,15 @@
 <template>
-  <div class="wrapper-inner">
-    <top-menu></top-menu>
-    <page-header></page-header>
-  </div>
+  <page-template>
+    <events></events>
+  </page-template>
 </template>
 
 <script>
-  import TopMenu from '../../shared/components/TopMenu.vue';
-  import PageHeader from '../../shared/components/PageHeader.vue';
+  import Events from '../../shared/components/Events.vue';
+  import PageTemplate from '../../shared/components/PageTemplate';
 
   export default {
     name: 'home-page',
-    components: { TopMenu, PageHeader }
+    components: { PageTemplate, Events }
   }
 </script>
