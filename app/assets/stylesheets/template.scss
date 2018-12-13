@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=cyrillic,latin);
 .clearfix {
     *zoom: 1;
 }
@@ -367,7 +368,7 @@ body {
 /*======================= TOP =======================*/
 /*======================= HEADER =======================*/
 #header-row {
-    padding: 58px 0 65px;
+    padding: 20px 0 20px 0;
 }
 #logo {
     text-align: center;
@@ -923,8 +924,9 @@ blockquote small {
 .photos .item_img a:after {
     content: '\f00e';
 }
-.photos .mod-newsflash-adv_custom-link {
+.mod-newsflash-adv_custom-link {
     padding-top: 4px;
+    text-align: center;
 }
 /*======================= FOOTER =======================*/
 #copyright-row {
@@ -998,3 +1000,11 @@ blockquote small {
     opacity: 0.5;
     filter: alpha(opacity=50);
 }
+/*==== Custom styles ===*/
+.item-link {
+  color: #333333;
+  :hover,:focus {
+    color: #333333;
+  }
+}
+

@@ -1,0 +1,10 @@
+%nav.navigation{role: 'navigation'}
+  = link_to('Dashboard',
+      admin_root_path,
+      class: 'navigation__link navigation__link--dashboard',
+      style: controller_name == 'dashboard' && 'font-weight: 700')
+
+  - DashboardManifest::DASHBOARDS.each do |resource|
+    = link_to(resource.to_s.classify.pluralize,
+        [:admin, resource],
+        class: "navigation__link navigation__link")

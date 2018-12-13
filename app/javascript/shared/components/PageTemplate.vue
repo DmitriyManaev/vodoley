@@ -10,15 +10,15 @@
           </div>
         </div>
         <slot></slot>
+        <div id="push"></div>
       </div>
-      <div id="push"></div>
     </div>
     <page-footer></page-footer>
   </div>
 </template>
 
 <script>
-  import store      from '../../Store/Store.vue';
+  import store      from '../../store/Store.vue';
   import TopMenu    from './TopMenu.vue';
   import PageHeader from './PageHeader.vue';
   import PageFooter from './PageFooter.vue';
@@ -33,6 +33,7 @@
     },
     created: function () {
       this.$store.dispatch('fetchEvents');
+      this.$store.dispatch('fetchEmployees');
     }
   }
 </script>

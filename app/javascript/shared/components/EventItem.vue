@@ -1,26 +1,35 @@
 <template>
   <span class="span6">
-    <article class="item column-1" :class="">
-      <figure class="item_img img-intro img-intro__left">
-        <img src="/images/service-1.jpg" alt="" />
-      </figure>
-      <header class="item_header">
-        <h5 class="item_title">
-          {{ event.title }}
-        </h5>
-      </header>
-      <div class="item_introtext">
-        <p>
-          {{ event.description }}
-        </p>
-      </div>
-    </article>
+    <a v-bind:href="linkToEvent(event)" class="item-link">
+      <article class="item column-1">
+        <figure class="item_img img-intro img-intro__left">
+          <img :src="event.image.small.url" :alt="event.title" />
+        </figure>
+        <header class="item_header">
+          <h4 class="item_title item_title__top_blocks">
+            {{ event.title }}
+          </h4>
+        </header>
+        <div class="item_introtext">
+          <h5>
+            {{ event.description }}</h5>
+          <p>
+            {{ event.description }}
+          </p>
+        </div>
+      </article>
+    </a>
   </span>
 </template>
 
 <script>
   export default {
     name: 'event-item',
-    props: ['event', 'index']
+    props: ['event'],
+    methods: {
+      linkToEvent: function (event) {
+        return `${window.location.origin}/events/${event.slug}`
+      }
+    }
   }
 </script>

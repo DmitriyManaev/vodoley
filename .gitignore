@@ -21,7 +21,12 @@
 /yarn-error.log
 
 /public/assets
+/public/uploads
 .byebug_history
+
+# IDE projects
+/.idea
+/.project
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key

@@ -8,6 +8,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'font-awesome-sass', '~> 5.0.6'
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -30,9 +31,17 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'hamlit'
 gem 'faker'
 gem 'sitemap_generator'
+gem 'simple_form'
+gem 'devise'
 
 gem 'carrierwave', '>= 1.0.0.rc', '< 2.0'
 gem 'mini_magick'
+gem 'ckeditor'
+
+gem 'administrate', github: 'thoughtbot/administrate'
+gem 'administrate-field-carrierwave', '~> 0.2.0'
+gem 'administrate-field-ckeditor', '~> 0.0.9'
+gem 'administrate-field-date_picker', '~> 0.1.0'
 
 group :development, :test do
   gem 'pry'

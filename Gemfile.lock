@@ -1,3 +1,19 @@
+GIT
+  remote: https://github.com/thoughtbot/administrate.git
+  revision: e0a7c28b6411c8df736b2d89208b838060516c3f
+  specs:
+    administrate (0.11.0)
+      actionpack (>= 4.2, < 6.0)
+      actionview (>= 4.2, < 6.0)
+      activerecord (>= 4.2, < 6.0)
+      autoprefixer-rails (>= 6.0)
+      datetime_picker_rails (~> 0.0.7)
+      jquery-rails (>= 4.0)
+      kaminari (>= 1.0)
+      momentjs-rails (~> 2.8)
+      sass-rails (~> 5.0)
+      selectize-rails (~> 0.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -44,11 +60,23 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    administrate-field-carrierwave (0.2.0)
+      administrate (< 1.0.0)
+      rails (>= 4.2)
+    administrate-field-ckeditor (0.0.9)
+      administrate (>= 0.3, < 1.0)
+      ckeditor (~> 4.1)
+      rails (>= 4.2, < 6.0)
+    administrate-field-date_picker (0.1.0)
+      administrate (< 1.0.0)
+      flatpickr_rails (~> 0.0.2)
+      rails (>= 4.2, < 6)
     archive-zip (0.11.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
     autoprefixer-rails (9.4.2)
       execjs
+    bcrypt (3.1.12)
     bindex (0.5.0)
     bootsnap (1.3.2)
       msgpack (~> 1.0)
@@ -73,9 +101,23 @@ GEM
     chromedriver-helper (2.1.0)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
+    ckeditor (4.2.4)
+      cocaine
+      orm_adapter (~> 0.5.0)
+    climate_control (0.2.0)
+    cocaine (0.6.0)
+      terrapin (= 0.6.0)
     coderay (1.1.2)
     concurrent-ruby (1.1.3)
     crass (1.0.4)
+    datetime_picker_rails (0.0.7)
+      momentjs-rails (>= 2.8.1)
+    devise (4.5.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 6.0)
+      responders
+      warden (~> 1.2.3)
     diff-lcs (1.3)
     erubi (1.7.1)
     execjs (2.7.0)
@@ -87,6 +129,10 @@ GEM
     faker (1.9.1)
       i18n (>= 0.7)
     ffi (1.9.25)
+    flatpickr_rails (0.0.3)
+      railties (>= 3.0)
+    font-awesome-sass (5.0.13)
+      sassc (>= 1.11)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     hamlit (2.9.2)
@@ -99,6 +145,22 @@ GEM
     jbuilder (2.8.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    jquery-rails (4.3.3)
+      rails-dom-testing (>= 1, < 3)
+      railties (>= 4.2.0)
+      thor (>= 0.14, < 2.0)
+    kaminari (1.1.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.1.1)
+      kaminari-activerecord (= 1.1.1)
+      kaminari-core (= 1.1.1)
+    kaminari-actionview (1.1.1)
+      actionview
+      kaminari-core (= 1.1.1)
+    kaminari-activerecord (1.1.1)
+      activerecord
+      kaminari-core (= 1.1.1)
+    kaminari-core (1.1.1)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -119,11 +181,14 @@ GEM
     mini_mime (1.0.1)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
+    momentjs-rails (2.20.1)
+      railties (>= 3.1)
     msgpack (1.2.4)
     multi_json (1.13.1)
     nio4r (2.3.1)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
+    orm_adapter (0.5.0)
     pg (1.1.3)
     pry (0.12.2)
       coderay (~> 1.1.0)
@@ -164,6 +229,9 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     regexp_parser (1.3.0)
+    responders (2.4.0)
+      actionpack (>= 4.2.0, < 5.3)
+      railties (>= 4.2.0, < 5.3)
     rspec-core (3.8.0)
       rspec-support (~> 3.8.0)
     rspec-expectations (3.8.2)
@@ -194,9 +262,16 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    sassc (2.0.0)
+      ffi (~> 1.9.6)
+      rake
+    selectize-rails (0.12.6)
     selenium-webdriver (3.141.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2, >= 1.2.2)
+    simple_form (4.1.0)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     sitemap_generator (6.0.1)
       builder (~> 3.0)
     spring (2.0.2)
@@ -212,6 +287,8 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     temple (0.8.0)
+    terrapin (0.6.0)
+      climate_control (>= 0.0.3, < 1.0)
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
@@ -222,6 +299,8 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
+    warden (1.2.8)
+      rack (>= 2.0.6)
     web-console (3.7.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -241,13 +320,20 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  administrate!
+  administrate-field-carrierwave (~> 0.2.0)
+  administrate-field-ckeditor (~> 0.0.9)
+  administrate-field-date_picker (~> 0.1.0)
   bootsnap (>= 1.1.0)
   bootstrap-sass (~> 3.3.6)
   capybara (>= 2.15)
   carrierwave (>= 1.0.0.rc, < 2.0)
   chromedriver-helper
+  ckeditor
+  devise
   factory_bot_rails
   faker
+  font-awesome-sass (~> 5.0.6)
   hamlit
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
@@ -259,6 +345,7 @@ DEPENDENCIES
   rspec-rails (~> 3.5)
   sass-rails (~> 5.0)
   selenium-webdriver
+  simple_form
   sitemap_generator
   spring
   spring-watcher-listen (~> 2.0.0)

@@ -9,15 +9,18 @@
                 <h3>Мероприятия</h3>
               </header>
               <div class="items-row cols-2 row-0 row-fluid">
-                <event-item v-for="(event, index) in events"
+                <event-item v-for="event in events"
                             :key="event.id"
-                            :event="event"
-                            :index="index">
+                            :event="event">
                 </event-item>
               </div>
             </section>
           </div>
         </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="mod-newsflash-adv_custom-link">
+        <a href="/events" class="btn btn-info">Все мероприятия</a>
       </div>
     </div>
   </div>

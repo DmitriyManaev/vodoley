@@ -4,26 +4,26 @@
       <div class="container-fluid">
         <div class="row-fluid">
           <nav class="moduletable navigation span12">
-            <a class="btn btn-navbar btn-sf-menu"></a>
-            <span class="fa fa-bars">
+            <a class="btn btn-navbar btn-sf-menu" @click="toggleMenu()">
+              <span class="fa fa-bars"></span>
+            </a>
               <ul id="module93" class="sf-menu sticky sf-js-enabled sf-arrows">
                 <li>
-                  <a class="current firstItem">Главная</a>
+                  <a href="/" class="current firstItem">Главная</a>
                 </li>
                 <li>
-                  <a class="">О нас</a>
+                  <a href="/about">О нас</a>
                 </li>
                 <li>
-                  <a class="">Отзывы</a>
+                  <a href="/events">Мероприятия</a>
                 </li>
                 <li>
-                  <a class="">Мероприятия</a>
+                  <a href="/employees">Сотрудники</a>
                 </li>
                 <li>
-                  <a class="">Контакты</a>
+                  <a href="/contacts">Контакты</a>
                 </li>
               </ul>
-            </span>
           </nav>
         </div>
       </div>
@@ -33,6 +33,11 @@
 
 <script>
   export default {
-    name: 'top-menu'
+    name: 'top-menu',
+    methods: {
+      toggleMenu: function () {
+
+      }
+    }
   }
 </script>

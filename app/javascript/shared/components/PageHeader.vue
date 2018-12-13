@@ -6,7 +6,7 @@
           <div class="row-fluid">
             <div id="logo" class="span12">
               <a href="/" >
-                <img src="/images/logo.png" alt="Эра Водолея" />
+                <img src="/images/logo.png" alt="Центр развития Эра Водолея" />
               </a>
             </div>
           </div>
