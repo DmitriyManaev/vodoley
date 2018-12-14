@@ -41,5 +41,10 @@ class EmployeeDashboard < Administrate::BaseDashboard
     :content,
     :slug,
     :image,
+    :remove_image
   ].freeze
+
+  def permitted_attributes
+    super + [:remove_image]
+  end
 end

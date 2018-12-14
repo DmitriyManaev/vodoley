@@ -1,0 +1,48 @@
+en:
+  admin:
+    errors:
+      sign_in: 'Вы должны авторизоваться, чтобы продолжить работу.'
+  administrate:
+    dashboard: 'Главная'
+    actions:
+      edit: 'Редактировать'
+      destroy: 'Удалить'
+      show: 'Предварительный просмотр'
+      update: 'Обновить'
+      new_resource: 'Добавить'
+      create: 'Создать'
+      back: 'Назад'
+      search: 'Поиск'
+    collections:
+      employees: 'Сотрудники'
+      events: 'Мероприятия'
+    resources:
+      employee: 'Сотрудник'
+      event: 'Мероприятие'
+  helpers:
+    submit:
+      create: 'Создать'
+      update: 'Обновить'
+    label:
+      employee:
+        id: '№'
+        name: 'Имя'
+        description: 'Описание'
+        keywords: 'Ключевые слова'
+        content: 'Контент'
+        slug: 'Ссылка'
+        image: 'Изображение'
+        remove_image: 'Удалить изображение'
+        created_at: 'Создан'
+        updated_at: 'Обновлён'
+      event:
+         id: '#'
+         title: 'Заголовок'
+         description: 'Описание'
+         keywords: 'Ключевые слова'
+         content: 'Контент'
+         slug: 'Ссылка'
+         image: 'Изображение'
+         remove_image: 'Удалить изображение'
+         created_at: 'Создан'
+         updated_at: 'Обновлён'
